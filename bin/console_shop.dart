@@ -129,8 +129,14 @@ void main(List<String> arguments) {
         mall.showTotal();
         break;
       case '4':
+        print('정말 종료하시겠습니까? 종료하시려면 5를 입력해주세요!');
+        String? confirmExit = stdin.readLineSync();
+        if(confirmExit == '5'){
         print('이용해 주셔서 감사합니다~ 안녕히 가세요!');
         isRunning = false; //루프 종료
+        }else{
+        print('종료하지 않습니다.');
+        }
         break;
       default:
       print('지원하지 않는 기능입니다! 다시 시도해주세요 ...');
