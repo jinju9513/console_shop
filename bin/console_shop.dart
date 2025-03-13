@@ -68,9 +68,18 @@ class ShoppingMall {
     }
   }
 
-  // 상품의 총 가격 출력 메서드
+  // 장바구니의 담긴 리스트와 총액 출력
   void showTotal() {
-    print('장바구니에 $total 원 어치를 담으셨네요!');
+    if (cartList.isEmpty) {
+      print('장바구니에 담긴 상품이 없습니다.');
+    } else {
+      List<String> productNames = [];
+      for (var item in cartList) {
+        productNames.add(item.product.productName);
+      }
+      String pruductListString = productNames.join(',');
+      print('장바구니에 $pruductListString가 담겨있네요. 총 $total원 입니다!');
+    }
   }
 
   void clearCart() {
