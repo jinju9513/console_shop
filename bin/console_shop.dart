@@ -77,8 +77,8 @@ class ShoppingMall {
       for (var item in cartList) {
         productNames.add(item.product.productName);
       }
-      String pruductListString = productNames.join(',');
-      print('장바구니에 $pruductListString가 담겨있네요. 총 $total원 입니다!');
+      String productListString = productNames.join(',');
+      print('장바구니에 $productListString가 담겨있네요. 총 $total원 입니다!');
     }
   }
 
